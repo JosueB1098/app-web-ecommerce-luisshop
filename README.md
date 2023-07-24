@@ -1,16 +1,25 @@
 7. Procedimientos de instalación y configuración
+   
 7.1	Requisitos del entorno: 
-Verificar que el servidor cumpla con los requisitos mínimos para ejecutar la aplicación. Asegurarse de tener instalado Ruby versión "3.2.2", Rails "7.0.5" y las gemas necesarias, así como el gestor de dependencias Bundler,  asegúrese de tener instalado git. 
+Verificar que el servidor cumpla con los requisitos mínimos para ejecutar la aplicación. Asegurarse de tener instalado Ruby versión "3.2.2", Rails "7.0.5" y las gemas necesarias, así como el gestor de dependencias Bundler,  asegúrese de tener instalado git.
+
+ 
 7.2	Obtener el código fuente:
 Descargar o clonar el repositorio de "Luis Shop" desde el repositorio central en GitHub, donde se almacena el código fuente del proyecto.
+
 7.3	Instalar dependencias:
 Ejecutar el comando `bundle install` para instalar todas las gemas y dependencias requeridas por el proyecto. Bundler se encargará de asegurar que todas las versiones de las gemas sean las correctas.
+
 7.4	Configuración de la base de datos:
 En el archivo de configuración de Rails (`database.yml`), ajustar los parámetros de conexión de la base de datos. Crear la base de datos y aplicar las migraciones necesarias con los comandos `rails db:create` y `rails db:migrate`.
+
 7.5	Configuración de pasarelas de pago 
 Si se han incorporado pasarelas de pago y envío, como PayPal y Servientrega, configurar las credenciales y opciones requeridas para su funcionamiento en el entorno de producción.
+
 •	Crear una cuenta de desarrollador en PayPal: Acceder al sitio web de PayPal y registrarse como desarrollador. Esto permitirá obtener las credenciales necesarias para realizar pruebas en un entorno de desarrollo antes de lanzar la aplicación en producción.
+
 •	Crear una aplicación en PayPal: Dentro del panel de desarrollador de PayPal, crear una nueva aplicación para "Luis Shop". PayPal proporcionará un ID de cliente (Client ID) y una clave secreta (Secret Key) que serán utilizados para autenticar las solicitudes a la API de PayPal.
+
 •	Configurar las credenciales en "Luis Shop": En el código fuente de la aplicación "Luis Shop", se modificará el archivo de configuración para incluir las credenciales proporcionadas por PayPal. Estas credenciales deben ser almacenadas de manera segura y no expuestas públicamente para mantener la seguridad de las transacciones.
 
 
